@@ -1,0 +1,95 @@
+.productHead {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: white;
+}
+.productsContainer {
+  width: 100vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  place-items: center;
+  gap: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  overflow-x: hidden;
+  margin-top: 2em;
+}
+
+.topContainer {
+  /* width: 100%; */
+  /* padding: 2rem 0; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  /* place-items: center; */
+  /* justify-content: space-between;
+  align-items: center;
+  margin:0 auto; */
+}
+.img-container {
+  margin-top: 2rem;
+}
+
+.header {
+  padding-left: 2rem;
+}
+
+.header h2{
+    font-size: 3rem;
+}
+.header p {
+  font-size: 1rem;
+}
+.footer {
+  background-color: black;
+}
+.footerFlex div{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 4rem;
+}
+
+a {
+  color: rgb(221, 211, 211);
+  text-decoration: none;
+}
+.signIn {
+  width: 300px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+}
+h1 {
+  text-align: center;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.login {
+  padding: 0.7rem 2rem;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+}
+.login:hover {
+  cursor: pointer;
+  background-color: rgb(36, 28, 28);
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* .productsContainer {
+        display:flex;
+        flex-direction:column ;
+    } */
+}
