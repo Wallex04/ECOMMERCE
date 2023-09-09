@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, json } from "react-router-dom"
 import { ShoppingCart } from 'phosphor-react'
 import './navbar.css'
+import imageLogo from '../assets/image/imagesLogo2.png'
 
 
 const Navbar = () => {
@@ -23,38 +24,22 @@ const [searchItem, setSearchItem] = useState([])
   return (
     <div className='navbar'>
         <div className="productHead">
-          <h1>Wallex<br/>telecomm</h1>
+          <img src={imageLogo} style={{width:'150px'} }alt="" />
         </div>
         <div className='inputText'>
           <input className='searchInput' onChange={(e) => setSearchItem(e.target.value)} type="text" placeholder='search' />
-          <button className='search'>search</button>
+          {/* <button className='search'>search</button> */}
         </div>
       <div className="links">
       <Link to='/'>Home</Link>
       <Link to='/SignIn' >signIn</Link>
+      <Link to='/SignUp' >login/<br/>signUp</Link>
         <Link to='/shop'>shop</Link>
-        {/* <Link to='/footer'>Footer</Link> */}
         <Link to='/cart'>
           <ShoppingCart size={32} />
         </Link>
       </div>
-        { 
-        // searchItem.map((item) => {
-        //   return (
-        //     <div key={id}>
-        //       <p>{item.price}</p>
-        //     </div>
-        //   )
-        // })
-          // searchItem.filter((item) => {
-          //   return searchItem.toLowercase() === ''? item: item.category.toLowercase().includes(searchItem);
-          // }).map((item, id) =>{
-          //   <div key={id}>
-          //     <p>{item.category}</p>
-          //   </div>
-          // })
-         }
-
+    
     </div>
   );
 };

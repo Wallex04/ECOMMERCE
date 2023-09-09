@@ -1,9 +1,37 @@
-.productHead {
-  text-align: center;
-  margin: 1.5rem 0;
-  color: white;
+/* Top home begin style */
+.topContainer {
+  padding: 2rem 0;
+  gap: 30px;
+background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
-.productsContainer {
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 4rem;
+}
+
+.header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 4rem;
+  /* opacity: 0.9; */
+}
+
+ h1{
+  font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 45px;
+   padding-bottom: 0.5rem;
+}
+.header p {
+  font-size: 1.3rem;
+}
+/* Top home begin style end*/
+
+/* productCard styling */
+.testing{
   width: 100vw;
   margin: auto;
   display: grid;
@@ -13,66 +41,249 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   overflow-x: hidden;
   margin-top: 2em;
+
 }
 
-.topContainer {
-  /* width: 100%; */
-  /* padding: 2rem 0; */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.productCover {
+  width: 400px;
+  height: 100%;
+  border-radius: 0.4rem;
+  padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+.productHead {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: white;
+}
+
+.productImg {
+  width: 100%;
+  border-radius: 4px 4px 0px 0px;
+  margin-bottom: 1.2em;
+} 
+
+.productImg img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.textCover {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  /* place-items: center; */
-  /* justify-content: space-between;
-  align-items: center;
-  margin:0 auto; */
-}
-.img-container {
-  margin-top: 2rem;
+  line-height: 20px;
+  color: black;
+  font-weight: 700;
+  gap: 0.4rem;
 }
 
-.header {
-  padding-left: 2rem;
+.oldPrice {
+  text-decoration: line-through;
+  margin-right: 3px;
+  opacity: 0.7;
 }
 
-.header h2{
-    font-size: 3rem;
+.discountPercent {
+  vertical-align: super;
+  font-size: 60%;
+  color: red;
 }
-.header p {
-  font-size: 1rem;
+.cartBtn {
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  border: 1px solid black;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 0.6rem;
 }
-.footer {
+.cartBtn:hover {
+  color: white;
   background-color: black;
 }
-.footerFlex div{
+/*Home productCard style end */
+
+/* about style start */
+.about {
+  background-color: rgb(193, 184, 172);
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.aboutText {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-left: 4rem;
+}
+.aboutText h1{
+  font-size: 2rem;
+  line-height: 35px;
+  padding-bottom: 0.5rem;
+}
+
+.aboutText p {
+  font-weight: 500;
+}
+.aboutImage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* about style end  */
+
+/* footer style start */
+.footer {
+  font-family: sans-serif, Arial, Helvetica;
+  background-color: black;
+}
+.footerFlex {
+  padding-top: 2rem;
   display: flex;
+  margin-left: 3rem;
+  gap: 17rem;
+  /* flex-direction: column; */
+  /* gap: 4rem; */
+  /* justify-content: space-between; */
+  /* margin: 0 4rem; */
+}
+
+.divFooter {
+  opacity: 0.7;
   justify-content: space-between;
-  margin: 0 4rem;
+  line-height: 20px;
+  color: white;
+}
+
+.divFooter a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
 }
 
 a {
   color: rgb(221, 211, 211);
-  text-decoration: none;
 }
+/* footer style end */
+
+
 .signIn {
-  width: 300px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; */
-}
-h1 {
-  text-align: center;
-}
-form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: auto;
   height: 60vh;
+  width: 30rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.headerSignUp {
+  text-align: center;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+hr {
+  margin-bottom: 1.5rem;
+  width: 1000px;
+}
+label {
+  margin-bottom: 0.4rem;
+  opacity: 0.9;
+}
 
+input {
+  border: outset;
+  padding-left: 0.6rem;
+  font-size: 1.2rem;
+  width: 18rem;
+  height:2.5rem;
+  min-width:15rem;
+ border-radius:0.4rem; 
+  margin-bottom:0.6rem;
+}
+input:focus{
+  border: none;
+}
+input::placeholder {
+  opacity: 0.4;
+}
+
+.create {
+  width: 18rem;
+  border: none;
+  margin-right: 2rem;
+  padding: 0.6rem 0;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1.2rem;
+  background-color: blueviolet;
+}
+
+.create:hover {
+  cursor: pointer;
+  background-color: rgb(38, 16, 59);
+}
+
+.createAccount{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: auto;
+  width: 25rem;
+}
+.Account {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+
+.paragraphPrivacy {
+  color: rgb(221, 211, 211);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.log {
+  background-color: rgba(237, 218, 218, 0.204);
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.logBtn {
+  width: 18rem;
+  margin-right: 4.5rem !important;
+  border: 1px solid #ed017f;
+  display: block;
+  margin: auto;
+  color: #ed017f;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.logBtn:hover {
+  background-color: #ed59a8;
+  color: white;
+}
+
+.log p {
+  opacity: 0.5;
+  margin-bottom: 0.3rem;
 }
 .login {
+  width: 20rem;
   padding: 0.7rem 2rem;
   background-color: black;
   color: white;
@@ -85,11 +296,54 @@ form {
   cursor: pointer;
   background-color: rgb(36, 28, 28);
 }
-
-
-@media only screen and (max-width: 600px) {
-  /* .productsContainer {
-        display:flex;
-        flex-direction:column ;
-    } */
+.signUp:hover {
+  background-color: #ed017f;
+  color: white !important;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+@media only screen and (max-width: 450px) {
+  .productCard {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .productImg {
+    width: 80%;
+    border: 2px solid red;
+  }
+
+  .productImg img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+}
+
+.brand_cat {
+  display: flex;
+  gap: 5px;
+}
+
+.prod_desc {
+  font-style: italic;
+}
+
+.btn {
+  display: block;
+  margin: auto;
+  border: none;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  background-color: rgb(42, 41, 41);
+  color: white;
+  border-radius: 0.4rem;
+}
+
