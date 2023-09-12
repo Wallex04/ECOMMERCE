@@ -22,17 +22,7 @@
   /* border-radius:0.7rem 0 0 0.7rem; */
   border: none;
 }
-/* .search {
-    background: rgb(234, 42, 58);
-    min-width: 3rem;
-    width: 5rem;
-    color: white;
-    font-size: 1rem;
-    height: 3rem;
-    border-radius: 0 0.9rem 0.9rem 0;
-    outline: none;
-    border: none;
-} */
+
 ::placeholder {
     font-size: 1.5rem;
     padding-left: 0.7rem;

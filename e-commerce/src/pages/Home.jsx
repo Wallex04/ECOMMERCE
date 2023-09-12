@@ -32,7 +32,7 @@ const Home = () => {
             <p>Explore our exclusive offers and save big with<br/> our high-performance tech.</p>
           </div>
           <div className='img-container'>
-            <img src={image2} alt="" />
+            <img className='image1' src={image2} alt="" />
             <img src={image1} alt="" />
           </div>
           </div>

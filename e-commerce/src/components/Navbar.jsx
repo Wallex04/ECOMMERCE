@@ -32,8 +32,8 @@ const [searchItem, setSearchItem] = useState([])
         </div>
       <div className="links">
       <Link to='/'>Home</Link>
-      <Link to='/SignIn' >signIn</Link>
-      <Link to='/SignUp' >login/<br/>signUp</Link>
+      <Link to='/SignIn' >signin</Link>
+      <Link to='/SignUp' >Register</Link>
         <Link to='/shop'>shop</Link>
         <Link to='/cart'>
           <ShoppingCart size={32} />
