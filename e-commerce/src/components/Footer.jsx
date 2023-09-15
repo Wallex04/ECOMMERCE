@@ -8,7 +8,7 @@ import React from 'react'
       <a href="#">home</a>
     </div>
     <div className='divFooter'>
-      <a href="#">About Us</a>
+      <a href="AboutUS">About Us</a>
     </div>
     <div className='divFooter'>
       <a href="#">Contact Us</a>

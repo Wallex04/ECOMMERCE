@@ -1,5 +1,6 @@
 import React from "react";
-
+import { useContext } from 'react';
+import { CartContext } from "../context/CartContext";
 // Function to convert price from dollars to custom Naira symbol and format appropriately
 const convertToNaira = (priceInDollars, customNairaSymbol) => {
   // Set the exchange rate (1 USD to 850 Naira)
@@ -20,7 +21,7 @@ const convertToNaira = (priceInDollars, customNairaSymbol) => {
 // Define your custom Naira symbol here (e.g., '₦')
 const customNairaSymbol = "₦";
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({product}) => {
   // Convert the price from dollars to Naira and format with custom symbol
   const priceInNaira = convertToNaira(product.price, customNairaSymbol);
 
@@ -29,6 +30,9 @@ const ProductDetails = ({ product }) => {
     product.price - (product.discountPercentage / 100) * product.price,
     customNairaSymbol
   );
+
+  const {onAdd, quantity, onIncrement, onDecrement} =useContext(CartContext)
+
 
   return (
     <div className="productCover">
@@ -51,11 +55,11 @@ const ProductDetails = ({ product }) => {
           <p className="description">Description:  {product.description}</p>
 
           <div className="cartContainer">
-            <button className="addCart">Add to cart</button>
+            <button className="addCart" onClick={() => onAdd(product, quantity)}>Add to cart</button>
             <div className="cartIncrement">
-              <button className="increment">-</button>
-              <input className="inputIncrement" type="number" />
-              <button className="increment">+</button>
+              <button className="increment" onClick={onDecrement}>-</button>
+              <p className="inputIncrement">{quantity} </p>
+              <button className="increment" onClick={onIncrement}>+</button>
             </div>
           </div>
 

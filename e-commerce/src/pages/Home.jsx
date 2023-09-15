@@ -3,6 +3,7 @@ import ProductCard from '../components/ProductCard/ProductCard';
 import image1 from '../assets/image/laptopimages-removebg-preview (1).png'
 import image2 from '../assets/image/phone_images-removebg-preview.png'
 import AboutUs from '../components/AboutUs';
+import SearchProducts from '../components/SearchProducts/SearchProducts';
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
     return (
   
       <div>
+            <SearchProducts/>
           <div className='topContainer'>
           <div className='header'>
             <h1>Unbeatable, secure and<br/> reliable deals</h1>
@@ -46,7 +48,4 @@ const Home = () => {
   
   export default Home;
 
-  // {
-  //   [...list].filter(item => (item.category === 'smartphones') || (item.category === 'laptops')).map(prod => (
-  //   
-  // }
+  

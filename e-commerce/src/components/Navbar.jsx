@@ -1,45 +1,49 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { Link, json } from "react-router-dom"
 import { ShoppingCart } from 'phosphor-react'
 import './navbar.css'
-import imageLogo from '../assets/image/imagesLogo2.png'
+import imageLogo from '../assets/image/Logo.svg'
+import CartIcon from './CartIcon'
+import { CartContext } from '../context/CartContext'
 
 
 const Navbar = () => {
-const [searchItem, setSearchItem] = useState([])
+  const [searchItem, setSearchItem] = useState([])
+  const {onAdd, quantity,totalQuantities} =useContext(CartContext)
 
   const getData = async () => {
     const response = await fetch("https://dummyjson.com/products")
     const result = await response.json()
     setSearchItem(result.products)
+    console.log(result)
   }
   console.log(setSearchItem)
 
-  useEffect(()=>{
+  useEffect(() => {
     getData()
-  },[])
+  }, [])
 
 
 
   return (
     <div className='navbar'>
+      <div className="navbar-wrapper">
         <div className="productHead">
-          <img src={imageLogo} style={{width:'150px'} }alt="" />
+          <Link to='/'><img src={imageLogo} alt="" /></Link>
         </div>
-        <div className='inputText'>
-          <input className='searchInput' onChange={(e) => setSearchItem(e.target.value)} type="text" placeholder='search' />
-          {/* <button className='search'>search</button> */}
+
+        <div className="links">
+          <Link to='/SignIn'>Log In</Link>
+          <Link to='/SignUp'>Register</Link>
+          <Link to='/shop'>Shop</Link>
+          <Link to='/cart'><ShoppingCart className='cart'/>
+        <p className='cartText'>{totalQuantities}</p>
+          </Link>
+
         </div>
-      <div className="links">
-      <Link to='/'>Home</Link>
-      <Link to='/SignIn' >signin</Link>
-      <Link to='/SignUp' >Register</Link>
-        <Link to='/shop'>shop</Link>
-        <Link to='/cart'>
-          <ShoppingCart size={32} />
-        </Link>
+
       </div>
-    
+
     </div>
   );
 };

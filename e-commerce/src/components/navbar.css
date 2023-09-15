@@ -1,42 +1,48 @@
 .navbar {
-    width: 100vw;
-    display: flex;
-    padding: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    background: rgb(61, 59, 59);
-    overflow-x: hidden;
-}
-.inputText {
-    display: flex;
-    align-items: center;
-}
-.searchInput {
-    min-width: 8rem;
-  width: 25rem;
-  outline: none;
-  font-size: 1.5rem;
-  height: 3.5rem;
-  padding-left: 1rem;
-  border-radius: 0.7rem;
-  /* border-radius:0.7rem 0 0 0.7rem; */
-  border: none;
+  width: 100vw;
+  height: 110px;
+  background: rgb(9, 14, 29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-::placeholder {
-    font-size: 1.5rem;
-    padding-left: 0.7rem;
+.cart {
+  position: relative;
+}
+
+.cartText {
+position: absolute;
+top: 1.7rem;
+right: 7.5rem;
+border-radius: 50%;
+border: 1px solid yellow;
+padding: 0.3rem;
+background-color: orangered;
+}
+
+.navbar-wrapper {
+  width: 90%;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* overflow-x: hidden; */
+  overflow: hidden;
+  /* border: 2px solid rebeccapurple; */
+}
+
+.productHead {
+  width: 150px;
 }
 
 .links {
-    display: flex;
-    align-items: center;
-    margin-right: 3rem;
+  display: flex;
+  align-items: center;
 }
 .links a {
-    text-decoration: none;
-    color: white;
-    margin-left: 1.2rem;
-    font-size: 1.5rem;
-    
+  text-decoration: none;
+  color: white;
+  margin-left: 1.2rem;
+  font-size: 1.5rem;
 }

@@ -1,0 +1,66 @@
+.cartCover {
+    width: 400px;
+    height: 100%;
+    border-radius: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1em;
+    margin-bottom: 2rem;
+}
+.divPrice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnShopping {
+    background-color: black;
+    color: white;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+}
+.key {
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkOutBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkOut {
+    border: 1px solid green;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
+}
+
+.checkOut:hover {
+    background-color: rgb(16, 66, 16);
+    color: white;
+}
+
+aside  .h2{
+    margin-bottom: 2rem;
+   padding-left: 15rem;
+   
+}
+.imageCart {
+   
+    width: 400px;
+    border-radius: 4px 4px 0px 0px;
+    margin-bottom: 1.2em;
+    /* border: 5px solid red; */
+}
+
+.imageCart img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; 
+    /* border: 5px solid red; */
+}
+.cartDescription {
+   display: flex;
+   justify-content: center;
+   padding-left: 1rem;
+   flex-direction: column;
+}

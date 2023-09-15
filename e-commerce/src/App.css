@@ -1,4 +1,8 @@
 /* Top home begin style */
+*::-webkit-scrollbar {
+  display: none;
+}
+
 .topContainer {
   padding: 2rem 0;
   gap: 30px;
@@ -7,6 +11,7 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
+
 .img-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -116,6 +121,9 @@ h1 {
 /* productDetails */
 .cartContainer {
   width: 100%;
+  border: 5px solid red;
+  justify-content: center;
+  align-items:end;
   display: flex;
   gap: 1rem;
 }
@@ -133,7 +141,8 @@ h1 {
   gap: 1em;
 }
 
-.addCart:hover, .increment:hover {
+.addCart:hover,
+.increment:hover {
   border: none;
   background-color: black;
   color: white;

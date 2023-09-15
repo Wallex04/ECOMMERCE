@@ -13,10 +13,12 @@ import  {SignUp} from './pages/SignUp'
 import ProductPage from './pages/productPage/ProductPage'
 import Shop from './pages/shop/Shop'
 import LayoutPage from './pages/LayoutPage'
+import Cart from './pages/cart/Cart'
+
 
 function App() {
-  const [cartItems, setCartItems] = useState([])
-
+  
+  
   return (
      
    <Router>
@@ -26,8 +28,8 @@ function App() {
       <Route path='/SignIn' element={<SignIn/>}/>
       <Route path='/shop' element={<Shop/>}/>
       <Route path='/SignUp' element={<SignUp/>}/>
-      <Route path="/productPage/:title" element={<ProductPage cartItems={cartItems}/>}/>
-
+      <Route path="/productPage/:title" element={<ProductPage/>}/>
+       <Route path='/cart' element={<Cart/>}/>
 
     </Route>
     </Routes>

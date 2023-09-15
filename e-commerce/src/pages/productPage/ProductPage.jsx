@@ -3,7 +3,8 @@ import ProductDetails from '../../components/ProductDetails';
 import styles from './productPage.module.css'
 import { useParams } from 'react-router-dom';
 
-const ProductPage = () => {
+const ProductPage = (props) => {
+  const {onAdd} = props;
   const [product, setProduct] = useState({});
   const {title} = useParams(); 
 
@@ -29,7 +30,7 @@ const ProductPage = () => {
   return (
     <div>
         <h1>welcome back</h1>
-        <ProductDetails product={product} />
+        <ProductDetails product={product} onAdd={onAdd}/>
     </div>
   );
 };
