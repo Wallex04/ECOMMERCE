@@ -45,22 +45,46 @@ aside  .h2{
    
 }
 .imageCart {
-   
     width: 400px;
     border-radius: 4px 4px 0px 0px;
     margin-bottom: 1.2em;
-    /* border: 5px solid red; */
 }
 
 .imageCart img {
     width: 100%;
     height: 200px;
     object-fit: contain; 
-    /* border: 5px solid red; */
 }
 .cartDescription {
    display: flex;
    justify-content: center;
    padding-left: 1rem;
    flex-direction: column;
+}
+
+@media only screen and (max-width: 550px) {
+.key {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+ aside .h2{
+    margin-bottom: 2rem;
+   padding-left: 15rem;
+}
+}
+
+@media screen and (min-device-width: 550px) and (max-device-width: 950px) { 
+    .key {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .cartCover {
+        width: 300px;
+        min-width: 200px;
+    }
+    aside .h2{
+        margin: 2rem 0;
+       padding-left: 5rem;
+    }
 }

@@ -35,7 +35,7 @@ const Home = () => {
           </div>
           <div className='img-container'>
             <img className='image1' src={image2} alt="" />
-            <img src={image1} alt="" />
+            <img className='image2' src={image1} alt="" />
           </div>
           </div>
         <div className='' key={list.id}>

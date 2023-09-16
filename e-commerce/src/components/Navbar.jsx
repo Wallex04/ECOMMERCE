@@ -3,7 +3,7 @@ import { Link, json } from "react-router-dom"
 import { ShoppingCart } from 'phosphor-react'
 import './navbar.css'
 import imageLogo from '../assets/image/Logo.svg'
-import CartIcon from './CartIcon'
+// import CartIcon from './CartIcon'
 import { CartContext } from '../context/CartContext'
 
 
@@ -33,11 +33,13 @@ const Navbar = () => {
         </div>
 
         <div className="links">
-          <Link to='/SignIn'>Log In</Link>
-          <Link to='/SignUp'>Register</Link>
           <Link to='/shop'>Shop</Link>
-          <Link to='/cart'><ShoppingCart className='cart'/>
+          <Link to='/AboutUs'>AboutUs</Link>
+          <Link to='/cart'><div style={{fontSize:'3rem'}} className='shoppingCart'>< ShoppingCart className='cart'/>
+          <div className='cartText1'>
         <p className='cartText'>{totalQuantities}</p>
+          </div>
+          </div>
           </Link>
 
         </div>

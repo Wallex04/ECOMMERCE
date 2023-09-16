@@ -121,7 +121,6 @@ h1 {
 /* productDetails */
 .cartContainer {
   width: 100%;
-  border: 5px solid red;
   justify-content: center;
   align-items:end;
   display: flex;
@@ -148,16 +147,9 @@ h1 {
   color: white;
   opacity: 0.8;
 }
-.inputIncrement {
-  border: 1px solid black;
-  outline: none;
-  width: 60%;
-  padding: 10px 20px;
-  border-radius: 0.3rem;
-}
+
 .increment {
   border: 1px solid black;
-  /* width: 20%; */
   padding: 10px 20px;
   border-radius: 0.3rem;
   font-size: 24px;
@@ -365,19 +357,32 @@ input::placeholder {
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 320px) {
   .productCard {
     width: 300px;
   }
+  .header h1 {
+   font-size: 1.8rem; 
+  }
+  p {
+    font-size: 1.2rem;
+  }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 500px) {
+  .testing{
+    padding: 0;
+    margin: 0;
+  }
+  .topContainer, .img-container {
+    margin-bottom: 2rem;
+  }
+ 
   .productCover {
-    width: 200px;
-    border: 5px solid black;
+    width: 400px;
+    margin: 0;
   }
   .productImg {
     width: 100%;
-    border: 2px solid red;
   }
 
   .productImg img {
@@ -400,33 +405,67 @@ input::placeholder {
     /* text-align: center; */
   }
   .header h1 {
-    font-size: 1.4rem;
-    line-height: 30px;
+    font-size: 2.2rem;
+    width: 100%;
+    line-height: 55px;
     font-weight: 600;
   }
   .header p {
-    font-size: 1rem;
-    line-height: 25px;
+    font-size: 1.5rem;
+    line-height: 40px;
+    opacity: 100%;
   }
-  .image1 {
-    width: 280px;
+
+  .img-container {
+    margin-top: 0;
+  }
+  .image1, .image2 {
+    width: 450px;
   }
   .aboutText h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 48px;
   }
 
   .aboutText p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .aboutImage {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .aboutImage1,
   .aboutImage2 {
-    width: 280px;
+    width: 400px;
     margin: auto;
   }
+  .footerFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerFlex a {
+    color: white!important;
+    font-size: 1.2rem;
+  }
 }
+
+  @media screen and (min-device-width: 550px) and (max-device-width: 950px) { 
+    .footerFlex {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+    .footerFlex a {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
 
 .brand_cat {
   display: flex;

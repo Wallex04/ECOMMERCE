@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ProductDetails from '../../components/ProductDetails';
-import styles from './productPage.module.css'
 import { useParams } from 'react-router-dom';
 
 const ProductPage = (props) => {

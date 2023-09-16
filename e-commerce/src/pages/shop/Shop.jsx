@@ -1,11 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
 import '../../App.css'
-import ProductList from '../../components/ProductList';
+// import ProductList from '../../components/ProductList';
 // import CartContext from '../../context/CartContext';
-import { commerce } from '../../components/ProductList';
+// import { commerce } from '../../components/ProductList';
 import Navbar from '../../components/Navbar'
-import CartIcon from '../../components/CartIcon';
+// import CartIcon from '../../components/CartIcon';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 

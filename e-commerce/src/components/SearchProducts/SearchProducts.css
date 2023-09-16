@@ -46,11 +46,14 @@
   font-size: 1.5rem;
   padding: 10px;
   border-radius: 8px;
-  /* border-radius:0.7rem 0 0 0.7rem; */
   border: none;
 }
 
 ::placeholder {
   font-size: 1em;
   padding-left: 0.7rem;
+}
+
+@media only screen and (max-width: 320px) {
+ 
 }
