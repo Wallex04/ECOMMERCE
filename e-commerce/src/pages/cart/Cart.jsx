@@ -34,7 +34,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h2 className={styles.h2}>Cart</h2>
+    
       <div>{cartItems.length === 0 && <div>Cart is empty</div>}</div>
 
       {cartItems.map((item) => {
@@ -45,8 +45,9 @@ const Cart = () => {
 
         return (
           <div key={item.id}>
-         
+             {/* <h2 style={{textAlign:'center'}}>Cart</h2> */}
             <div className={styles.cartFlex}>
+          
               <div className={styles.cartImage}>
                 <div className={styles.cartImageDiv}>
                   <img src={item.thumbnail} alt="" />

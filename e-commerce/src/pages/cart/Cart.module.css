@@ -51,10 +51,10 @@ button {
     gap: 30px;
 }
 
-.h2{
+/* .h2{
     margin: 1rem 0;
-   padding-left: 2rem; 
-}
+  text-align: center; 
+} */
 
 
 @media only screen and (max-width: 550px) {
