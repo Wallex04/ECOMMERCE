@@ -46,6 +46,8 @@ const ProductCard = ({ products }) => {
           );
 
           return (
+
+            
             <div className="productCover">
               <div key={product.id} className="">
                 <Link to={`/productPage/${product.id}`} className="">

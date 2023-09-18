@@ -222,92 +222,6 @@ a {
 }
 /* footer style end */
 
-/* 
-.create {
-  width: 18rem;
-  border: none;
-  margin-right: 2rem;
-  padding: 0.6rem 0;
-  border-radius: 0.4rem;
-  color: white;
-  font-size: 1.2rem;
-  background-color: blueviolet;
-}
-
-.create:hover {
-  cursor: pointer;
-  background-color: rgb(38, 16, 59);
-}
-
-.createAccount {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin: auto;
-  width: 25rem;
-}
-.Account {
-  display: flex;
-  flex-direction: column;
-  width: 20rem;
-}
-
-.paragraphPrivacy {
-  color: rgb(221, 211, 211);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.log {
-  background-color: rgba(237, 218, 218, 0.204);
-  width: 100%;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-.logBtn {
-  width: 18rem;
-  margin-right: 4.5rem !important;
-  border: 1px solid #ed017f;
-  display: block;
-  margin: auto;
-  color: #ed017f;
-  font-size: 1.2rem;
-  padding: 0.5rem 0;
-  cursor: pointer;
-  border-radius: 0.4rem;
-}
-
-.logBtn:hover {
-  background-color: #ed59a8;
-  color: white;
-}
-
-.log p {
-  opacity: 0.5;
-  margin-bottom: 0.3rem;
-}
-.login {
-  width: 20rem;
-  padding: 0.7rem 2rem;
-  background-color: black;
-  color: white;
-  font-size: 1.2rem;
-  border-radius: 0.5rem;
-  outline: none;
-  border: none;
-}
-.login:hover {
-  cursor: pointer;
-  background-color: rgb(36, 28, 28);
-}
-.signUp:hover {
-  background-color: #ed017f;
-  color: white !important;
-} */
 
 * {
   margin: 0;
@@ -316,192 +230,124 @@ a {
   overflow-x: hidden;
 }
 
-
-
-
-.boxes {
-  --size: 32px;
-  --duration: 800ms;
-  height: calc(var(--size) * 2);
-  width: calc(var(--size) * 3);
-  position: relative;
-  transform-style: preserve-3d;
-  transform-origin: 50% 50%;
-  margin-top: calc(var(--size) * 1.5 * -1);
-  transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+.pl {
+  display: block;
+  width: 9.375em;
+  height: 9.375em;
 }
 
-.boxes .box {
-  width: var(--size);
-  height: var(--size);
-  top: 0;
-  left: 0;
-  position: absolute;
-  transform-style: preserve-3d;
+.pl__arrows,
+.pl__ring-rotate,
+.pl__ring-stroke,
+.pl__tick {
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-.boxes .box:nth-child(1) {
-  transform: translate(100%, 0);
-  -webkit-animation: box1 var(--duration) linear infinite;
-  animation: box1 var(--duration) linear infinite;
+.pl__arrows {
+  animation-name: arrows42;
+  transform: rotate(45deg);
+  transform-origin: 16px 52px;
 }
 
-.boxes .box:nth-child(2) {
-  transform: translate(0, 100%);
-  -webkit-animation: box2 var(--duration) linear infinite;
-  animation: box2 var(--duration) linear infinite;
+.pl__ring-rotate,
+.pl__ring-stroke {
+  transform-origin: 80px 80px;
 }
 
-.boxes .box:nth-child(3) {
-  transform: translate(100%, 100%);
-  -webkit-animation: box3 var(--duration) linear infinite;
-  animation: box3 var(--duration) linear infinite;
+.pl__ring-rotate {
+  animation-name: ringRotate42;
 }
 
-.boxes .box:nth-child(4) {
-  transform: translate(200%, 0);
-  -webkit-animation: box4 var(--duration) linear infinite;
-  animation: box4 var(--duration) linear infinite;
+.pl__ring-stroke {
+  animation-name: ringStroke42;
+  transform: rotate(-45deg);
 }
 
-.boxes .box > div {
-  --background: #5C8DF6;
-  --top: auto;
-  --right: auto;
-  --bottom: auto;
-  --left: auto;
-  --translateZ: calc(var(--size) / 2);
-  --rotateY: 0deg;
-  --rotateX: 0deg;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--background);
-  top: var(--top);
-  right: var(--right);
-  bottom: var(--bottom);
-  left: var(--left);
-  transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+.pl__tick {
+  animation-name: tick42;
 }
 
-.boxes .box > div:nth-child(1) {
-  --top: 0;
-  --left: 0;
+.pl__tick:nth-child(2) {
+  animation-delay: -1.75s;
 }
 
-.boxes .box > div:nth-child(2) {
-  --background: #145af2;
-  --right: 0;
-  --rotateY: 90deg;
+.pl__tick:nth-child(3) {
+  animation-delay: -1.5s;
 }
 
-.boxes .box > div:nth-child(3) {
-  --background: #447cf5;
-  --rotateX: -90deg;
+.pl__tick:nth-child(4) {
+  animation-delay: -1.25s;
 }
 
-.boxes .box > div:nth-child(4) {
-  --background: #DBE3F4;
-  --top: 0;
-  --left: 0;
-  --translateZ: calc(var(--size) * 3 * -1);
+.pl__tick:nth-child(5) {
+  animation-delay: -1s;
 }
 
-@-webkit-keyframes box1 {
-  0%, 50% {
-    transform: translate(100%, 0);
+.pl__tick:nth-child(6) {
+  animation-delay: -0.75s;
+}
+
+.pl__tick:nth-child(7) {
+  animation-delay: -0.5s;
+}
+
+.pl__tick:nth-child(8) {
+  animation-delay: -0.25s;
+}
+
+/* Animations */
+@keyframes arrows42 {
+  from {
+    transform: rotate(45deg);
   }
 
-  100% {
-    transform: translate(200%, 0);
+  to {
+    transform: rotate(405deg);
   }
 }
 
-@keyframes box1 {
-  0%, 50% {
-    transform: translate(100%, 0);
+@keyframes ringRotate42 {
+  from {
+    transform: rotate(0);
   }
 
-  100% {
-    transform: translate(200%, 0);
+  to {
+    transform: rotate(720deg);
   }
 }
 
-@-webkit-keyframes box2 {
-  0% {
-    transform: translate(0, 100%);
+@keyframes ringStroke42 {
+  from,
+    to {
+    stroke-dashoffset: 452;
+    transform: rotate(-45deg);
   }
 
   50% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(100%, 0);
+    stroke-dashoffset: 169.5;
+    transform: rotate(-180deg);
   }
 }
 
-@keyframes box2 {
-  0% {
-    transform: translate(0, 100%);
+@keyframes tick42 {
+  from,
+    3%,
+    47%,
+    to {
+    stroke-dashoffset: -12;
   }
 
-  50% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(100%, 0);
+  14%,
+    36% {
+    stroke-dashoffset: 0;
   }
 }
 
-@-webkit-keyframes box3 {
-  0%, 50% {
-    transform: translate(100%, 100%);
-  }
 
-  100% {
-    transform: translate(0, 100%);
-  }
-}
 
-@keyframes box3 {
-  0%, 50% {
-    transform: translate(100%, 100%);
-  }
 
-  100% {
-    transform: translate(0, 100%);
-  }
-}
-
-@-webkit-keyframes box4 {
-  0% {
-    transform: translate(200%, 0);
-  }
-
-  50% {
-    transform: translate(200%, 100%);
-  }
-
-  100% {
-    transform: translate(100%, 100%);
-  }
-}
-
-@keyframes box4 {
-  0% {
-    transform: translate(200%, 0);
-  }
-
-  50% {
-    transform: translate(200%, 100%);
-  }
-
-  100% {
-    transform: translate(100%, 100%);
-  }
-}
 
 @media only screen and (max-width: 320px) {
   .productCard {

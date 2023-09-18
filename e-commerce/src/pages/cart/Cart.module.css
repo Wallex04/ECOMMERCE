@@ -55,6 +55,50 @@ button {
 .checkOutBox {
     display: block;
 }
+
+.shopMore {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+}
+.shopMore a {
+    text-decoration: none;
+    color: #000;
+}
+
+.shopMore:hover {
+    background-color: black;
+    color: white;
+}
+
+.shopMore a:hover {
+    color: white;
+}
+
+.checkOut {
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+    margin-right: 15rem;
+}
+
+.checkOut a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.proceedCheckOut {
+    display: flex;
+    justify-content: right;
+}
+
+.checkOut:hover {
+    background-color: black;
+}
+.checkOut a:hover {
+    color: white;
+}
 @media only screen and (max-width: 550px) {
 .cartFlex {
     display: flex;
@@ -66,6 +110,33 @@ button {
 }
 .checkOut {
     margin-top: 5rem;
+}
+
+.cartImage {
+    display: block;
+    margin: auto;
+}
+.checkOutBox {
+    display: block;
+    margin: auto;
+    padding:0.4rem 2rem;
+}
+
+.totalPrice h3 {
+    display: block;
+    width: 100%;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    text-align: right;
+}
+
+.proceedCheckOut {
+   padding-top: 2rem;
+}
+
+.checkOut {
+    display: block;
+    margin: auto;
 }
 }
 

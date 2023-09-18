@@ -57,13 +57,13 @@ const Cart = () => {
                 <h5>{item.title}</h5>
                 <em>{item.description}</em>
               </div>
-              <button><Link to='/'>Shop more</Link></button>
+              
               <div className={styles.checkOutBox}>
                 <h3 className={styles.summary}>summary</h3>
                 <hr />
                 <div className={styles.cartDetails}>
                   <h4>{item.quantity}</h4>
-                  <p>{discountedPriceInNaira}</p>
+                  <h4>{discountedPriceInNaira}</h4>
                   <button style={{borderRadius:'0.4rem', backgroundColor:'white'}} onClick={() => onRemove(item)}>Remove</button>
                 </div>
               </div>
@@ -75,10 +75,11 @@ const Cart = () => {
       })}
           
         
-      <div style={{display:'block'}}>
+      <div className={styles.totalPrice} style={{display:'block'}}>
         <h3 style={{paddingTop:'3rem', textAlign:'right',marginRight:'15rem'}}>Total Price: {totalDiscountedPriceInNaira}</h3>
       </div>
-        <div className={styles.checkOutBox}>
+      <button className={styles.shopMore}><Link to='/'>Shop more</Link></button>
+        <div className={styles.proceedCheckOut}>
       <button className={styles.checkOut}><Link to="/checkout">proceed to checkout</Link></button>
       </div>
     </div>
