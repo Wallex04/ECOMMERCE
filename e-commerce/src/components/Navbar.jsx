@@ -32,7 +32,7 @@ const Navbar = () => {
         </div>
 
         <div className="links">
-          <Link to='/shop'>Shop</Link>
+          <Link to='/'>Home</Link>
           <Link to='/cart'><div style={{fontSize:'3rem'}} className='shoppingCart'>< ShoppingCart className='cart'/>
           <div className='cartText1'>
         <p className='cartText'>{totalQuantities}</p>

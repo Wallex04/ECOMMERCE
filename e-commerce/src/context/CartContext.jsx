@@ -1,10 +1,33 @@
-
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { createContext } from 'react';
 
 export const CartContext = createContext(null);
 
  const CartProvider = ({children}) => {
+
+// Load cart data from local storage on component mount
+useEffect(() => {
+  const savedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const savedTotalQuantities = JSON.parse(localStorage.getItem('totalQuantities')) || 0;
+  const savedTotalPrice = JSON.parse(localStorage.getItem('totalPrice')) || 0;
+
+  setCartItems(savedCartItems);
+  setTotalQuantities(savedTotalQuantities);
+  setTotalPrice(savedTotalPrice);
+}, []);
+
+
+ // Function to save cart data to local storage
+ const saveCartToLocalStorage = () => {
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  localStorage.setItem('totalQuantities', JSON.stringify(totalQuantities));
+  localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
+};
+
+
+
+
+  // chat end here
   const[cart, setCart]=useState()
     const [cartItems, setCartItems] = useState([])
     const [quantity, setQuantity] = useState(1)
@@ -30,6 +53,8 @@ export const CartContext = createContext(null);
         product.quantity = quantity;
         setCartItems([...cartItems, { ...product }]);
       }
+      // Save cart data to local storage
+  saveCartToLocalStorage();
     };
     
 
@@ -51,6 +76,9 @@ export const CartContext = createContext(null);
   setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity);
   setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity);
   setCartItems(newCartItems);
+
+      // Save cart data to local storage
+      saveCartToLocalStorage();
 };
 
     const objectPassed = {
@@ -75,3 +103,4 @@ export const CartContext = createContext(null);
 }
 
 export default CartProvider;
+

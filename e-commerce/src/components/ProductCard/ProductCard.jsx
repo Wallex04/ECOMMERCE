@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Function to convert price from dollars to custom Naira symbol and format appropriately
@@ -20,6 +20,8 @@ const convertToNaira = (priceInDollars, customNairaSymbol) => {
 };
 
 const ProductCard = ({ products }) => {
+  const [loading, setLoading] = useState(false);
+
   // Filter products to get only smartphones and laptops
   const filteredProducts = products.filter(
     (product) =>
@@ -31,6 +33,8 @@ const ProductCard = ({ products }) => {
   return (
     <div className="">
       <div className="testing">
+
+        
         {filteredProducts.map((product) => {
           // Convert the price from dollars to Naira and format with custom symbol
           const priceInNaira = convertToNaira(product.price, customNairaSymbol);

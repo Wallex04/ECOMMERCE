@@ -2,6 +2,8 @@ import React from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import styles from './Cart.module.css';
+import CheckOut from '../../components/CheckOut';
+import { Link } from 'react-router-dom';
 
 const convertToNaira = (priceInDollars, customNairaSymbol) => {
   const exchangeRate = 650;
@@ -18,7 +20,7 @@ const convertToNaira = (priceInDollars, customNairaSymbol) => {
 const customNairaSymbol = '₦';
 
 const Cart = () => {
-  const { cartItems, onRemove } = useContext(CartContext);
+  const { cartItems, onRemove, onIncrement, onDecrement} = useContext(CartContext);
 
   // Calculate the total price
   const totalDiscountedPrice = cartItems.reduce((total, item) => {
@@ -55,11 +57,12 @@ const Cart = () => {
                 <h5>{item.title}</h5>
                 <em>{item.description}</em>
               </div>
+              <button><Link to='/'>Shop more</Link></button>
               <div className={styles.checkOutBox}>
                 <h3 className={styles.summary}>summary</h3>
                 <hr />
                 <div className={styles.cartDetails}>
-                  <h5>{item.quantity}</h5>
+                  <h4>{item.quantity}</h4>
                   <p>{discountedPriceInNaira}</p>
                   <button style={{borderRadius:'0.4rem', backgroundColor:'white'}} onClick={() => onRemove(item)}>Remove</button>
                 </div>
@@ -72,24 +75,11 @@ const Cart = () => {
       })}
           
         
-      <div>
-        <h1>Total Price: {totalDiscountedPriceInNaira}</h1>
+      <div style={{display:'block'}}>
+        <h3 style={{paddingTop:'3rem', textAlign:'right',marginRight:'15rem'}}>Total Price: {totalDiscountedPriceInNaira}</h3>
       </div>
-
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <button
-          className="checkOut"
-          style={{
-            backgroundColor: 'green',
-            padding: '0.3rem 0.7rem',
-            fontSize: '1.5rem',
-            borderRadius: '0.5rem',
-            color: 'white',
-            marginRight: '13rem',
-          }}
-        >
-          Checkout
-        </button>
+        <div className={styles.checkOutBox}>
+      <button className={styles.checkOut}><Link to="/checkout">proceed to checkout</Link></button>
       </div>
     </div>
   );
