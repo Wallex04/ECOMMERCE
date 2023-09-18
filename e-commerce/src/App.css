@@ -21,7 +21,6 @@
 .header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding-left: 4rem;
-  /* opacity: 0.9; */
 }
 
 h1 {
@@ -209,11 +208,11 @@ h1 {
   opacity: 0.7;
   justify-content: space-between;
   line-height: 20px;
-  color: white;
 }
 
 .divFooter a {
   display: flex;
+  color: white;
   flex-direction: column;
   text-decoration: none;
 }
@@ -223,47 +222,7 @@ a {
 }
 /* footer style end */
 
-.signIn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: auto;
-  height: 60vh;
-  width: 30rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.headerSignUp {
-  text-align: center;
-  opacity: 0.7;
-  margin-bottom: 0.5rem;
-}
-hr {
-  margin-bottom: 1.5rem;
-  width: 1000px;
-}
-label {
-  margin-bottom: 0.4rem;
-  opacity: 0.9;
-}
-
-/* input {
-  border: outset;
-  padding-left: 0.6rem;
-  font-size: 1.2rem;
-  width: 18rem;
-  height: 2.5rem;
-  min-width: 15rem;
-  border-radius: 0.4rem;
-  margin-bottom: 0.6rem;
-}
-input:focus {
-  border: none;
-}
-input::placeholder {
-  opacity: 0.4;
-} */
-
+/* 
 .create {
   width: 18rem;
   border: none;
@@ -348,7 +307,7 @@ input::placeholder {
 .signUp:hover {
   background-color: #ed017f;
   color: white !important;
-}
+} */
 
 * {
   margin: 0;

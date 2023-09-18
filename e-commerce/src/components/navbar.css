@@ -25,9 +25,7 @@ font-size: 1.7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* overflow-x: hidden; */
   overflow: hidden;
-  /* border: 2px solid rebeccapurple; */
 }
 
 .productHead {

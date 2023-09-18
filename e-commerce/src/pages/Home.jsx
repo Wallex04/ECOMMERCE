@@ -3,11 +3,19 @@ import ProductCard from '../components/ProductCard/ProductCard';
 import image1 from '../assets/image/laptopimages-removebg-preview (1).png'
 import image2 from '../assets/image/phone_images-removebg-preview.png'
 import AboutUs from '../components/AboutUs';
+import { Link, useNavigate } from 'react-router-dom';
 import SearchProducts from '../components/SearchProducts/SearchProducts';
+import Footer from '../components/Footer';
+// import { UseNavigate } from 'react-router-dom';
 
 
 const Home = () => {
     const [list, setList] = useState([])
+    const navigate = useNavigate()
+
+  // const about =()=>{
+  //   navigate("/AboutUs")
+  // }
   
     const getItems = async () => {
       try {
@@ -41,7 +49,8 @@ const Home = () => {
         <div className='' key={list.id}>
           <ProductCard products={list}/>
   </div>
-       <AboutUs/>
+        <AboutUs/>
+       <Footer/>
       </div>
     )
   }

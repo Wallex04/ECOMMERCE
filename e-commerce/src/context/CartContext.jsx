@@ -11,7 +11,8 @@ export const CartContext = createContext(null);
     const [totalQuantities, setTotalQuantities] = useState(0)
     const [totalPrice, setTotalPrice] = useState(0)
    
-   
+    let foundProduct;
+
     const onAdd = (product, quantity) => {
       const exist = cartItems.find(item => item.id === product.id);
     
@@ -42,25 +43,15 @@ export const CartContext = createContext(null);
     setQuantity((prevQty) => prevQty - 1);
   };
   
-  const onRemove = (productId) => {
-    const itemToRemove = cartItems.find(item => item.id === productId);
-  
-    if (itemToRemove) {
-      // Calculate the reduction in total quantities and total price
-      const reductionInQuantities = itemToRemove.quantity;
-      const reductionInPrice = itemToRemove.price * itemToRemove.quantity;
-  
-      setTotalQuantities(prevTotalQuantities => prevTotalQuantities - reductionInQuantities);
-      setTotalPrice(prevTotalPrice => prevTotalPrice - reductionInPrice);
-  
-      // Remove the item from the cart
-      setCartItems(cartItems.filter(item => item.id !== productId));
-    }
-  };
-  
 
-  
+  const onRemove = (product) => {
+  foundProduct = cartItems.find((item) => item.id === product.id);
+  const newCartItems = cartItems.filter((item) => item.id !== product.id);
 
+  setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity);
+  setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity);
+  setCartItems(newCartItems);
+};
 
     const objectPassed = {
         cartItems, 

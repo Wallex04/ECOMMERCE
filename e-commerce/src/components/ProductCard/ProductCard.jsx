@@ -1,10 +1,9 @@
 import React from "react";
-import styles from "./productCard.module.css";
 import { Link } from "react-router-dom";
 
 // Function to convert price from dollars to custom Naira symbol and format appropriately
 const convertToNaira = (priceInDollars, customNairaSymbol) => {
-  // Set the exchange rate (1 USD to 850 Naira)
+  // Set the exchange rate (1 USD to 650 Naira)
   const exchangeRate = 650;
 
   // Calculate the price in Naira

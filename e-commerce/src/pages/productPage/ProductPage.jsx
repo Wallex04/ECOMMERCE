@@ -17,7 +17,6 @@ const ProductPage = (props) => {
 
         const data = await response.json();
         setProduct(data); // Update the product state with the fetched data
-        console.log("data", data); // Log the fetched data
       } catch (error) {
         console.error('Error fetching product data:', error);
       }
