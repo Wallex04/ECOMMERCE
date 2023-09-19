@@ -22,6 +22,7 @@ const convertToNaira = (priceInDollars, customNairaSymbol) => {
 const customNairaSymbol = "₦";
 
 const ProductDetails = ({product}) => {
+  const [isLoading, setIsLoading] = useState(true)
   // Convert the price from dollars to Naira and format with custom symbol
   const priceInNaira = convertToNaira(product.price, customNairaSymbol);
 

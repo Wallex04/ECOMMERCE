@@ -3,8 +3,10 @@ import ProductCard from '../components/ProductCard/ProductCard';
 import image1 from '../assets/image/laptopimages-removebg-preview (1).png'
 import image2 from '../assets/image/phone_images-removebg-preview.png'
 import AboutUs from '../components/AboutUs';
-import SearchProducts from '../components/SearchProducts/SearchProducts';
+import ContactUs from '../components/ContactUs';
+import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 import LoadingScreen from '../components/loadingScreen/LoadingScreen';
 
 
@@ -35,7 +37,7 @@ const Home = () => {
     //   <LoadingScreen /> // Display the loading screen while fetching data
     // ) : (  
        <div>
-            <SearchProducts/>
+          
           <div className='topContainer'>
           <div className='header'>
             <h1>Unbeatable, secure and<br/> reliable deals</h1>
@@ -50,7 +52,9 @@ const Home = () => {
           <ProductCard products={list}/>
   </div>
       {/* )} */}
-        <AboutUs/>
+        <Link to='/AboutUs'><AboutUs/></Link>
+        <Link to='/ContactUs'><ContactUs/></Link> 
+        <Link to='/FAQ'><FAQ/></Link> 
        <Footer/>
       </div>
        
