@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { Link, json } from "react-router-dom"
 import { ShoppingCart } from 'phosphor-react'
 import './navbar.css'
@@ -7,20 +7,7 @@ import { CartContext } from '../context/CartContext'
 
 
 const Navbar = () => {
-  const [searchItem, setSearchItem] = useState([])
-  const {onAdd, quantity,totalQuantities} =useContext(CartContext)
-
-  const getData = async () => {
-    const response = await fetch("https://dummyjson.com/products")
-    const result = await response.json()
-    setSearchItem(result.products)
-    console.log(result)
-  }
-  console.log(setSearchItem)
-
-  useEffect(() => {
-    getData()
-  }, [])
+  const {totalQuantities} =useContext(CartContext)
 
 
 

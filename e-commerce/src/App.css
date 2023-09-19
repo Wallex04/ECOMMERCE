@@ -230,6 +230,8 @@ a {
   overflow-x: hidden;
 }
 
+
+/* loader style */
 .pl {
   display: block;
   width: 9.375em;
@@ -344,7 +346,7 @@ a {
     stroke-dashoffset: 0;
   }
 }
-
+/* loader style end */
 
 
 

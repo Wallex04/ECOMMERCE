@@ -20,8 +20,6 @@ const convertToNaira = (priceInDollars, customNairaSymbol) => {
 };
 
 const ProductCard = ({ products }) => {
-  const [loading, setLoading] = useState(false);
-
   // Filter products to get only smartphones and laptops
   const filteredProducts = products.filter(
     (product) =>
@@ -33,8 +31,6 @@ const ProductCard = ({ products }) => {
   return (
     <div className="">
       <div className="testing">
-
-        
         {filteredProducts.map((product) => {
           // Convert the price from dollars to Naira and format with custom symbol
           const priceInNaira = convertToNaira(product.price, customNairaSymbol);
@@ -46,8 +42,6 @@ const ProductCard = ({ products }) => {
           );
 
           return (
-
-            
             <div className="productCover">
               <div key={product.id} className="">
                 <Link to={`/productPage/${product.id}`} className="">

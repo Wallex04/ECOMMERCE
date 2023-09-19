@@ -6,7 +6,6 @@ const ProductPage = (props) => {
   const {onAdd} = props;
   const [product, setProduct] = useState({});
   const {title} = useParams();   
-  const [isLoading, setIsLoading] = useState(true)
 
 
   useEffect(() => {
@@ -19,24 +18,18 @@ const ProductPage = (props) => {
 
         const data = await response.json();
         setProduct(data); // Update the product state with the fetched data
-        setIsLoading(false);
       } catch (error) {
         console.error('Error fetching product data:', error);
       }
     };
 
     fetchProductData();
-    setIsLoading(true)
   }, [title]);
 
   return (
-    // {isLoading ? (
-    //      <LoadingScreen /> // Display the loading screen while fetching data
-    //    ) : (
     <div>
         <h1>welcome back</h1>
         <ProductDetails product={product} onAdd={onAdd}/>
-        {/* )} */}
     </div>
   );
 };

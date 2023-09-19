@@ -1,5 +1,0 @@
- {/* Conditionally render the loader when loading is true */}
-        {loading ? (
-          
-        ) : (
-          /* Render products when loading is false */

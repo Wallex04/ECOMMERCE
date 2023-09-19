@@ -3,12 +3,9 @@ import { PaystackButton } from "react-paystack";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
-
-
 const CheckoutPage = () => {
+  const { totalPrice } = useContext(CartContext);
 
-  const { totalPrice } = useContext(CartContext)
-  // const totalPrice = 200
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
@@ -75,7 +72,7 @@ const CheckoutPage = () => {
                 />
               </div>
               <div className="">
-                <label>Email adress:</label>
+                <label>Email address:</label>
                 <input
                   type="text"
                   value={email}
@@ -84,8 +81,8 @@ const CheckoutPage = () => {
                 />
               </div>
             </div>
-            <div className="flex mb-10 gap-6 items-center">
-              <h3 className="input text-lg w-min">{formatAsNaira(totalPrice)}</h3>
+            <div className>
+              <h3> {formatAsNaira(totalPrice * 1000)}</h3>
             </div>
             <div className="btn-container">
               <PaystackButton

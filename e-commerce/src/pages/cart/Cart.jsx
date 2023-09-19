@@ -2,8 +2,9 @@ import React from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import styles from './Cart.module.css';
-import CheckOut from '../../components/CheckOut';
 import { Link } from 'react-router-dom';
+
+
 
 const convertToNaira = (priceInDollars, customNairaSymbol) => {
   const exchangeRate = 650;
@@ -20,7 +21,7 @@ const convertToNaira = (priceInDollars, customNairaSymbol) => {
 const customNairaSymbol = '₦';
 
 const Cart = () => {
-  const { cartItems, onRemove, onIncrement, onDecrement} = useContext(CartContext);
+  const { cartItems, onRemove} = useContext(CartContext);
 
   // Calculate the total price
   const totalDiscountedPrice = cartItems.reduce((total, item) => {
@@ -47,7 +48,6 @@ const Cart = () => {
 
         return (
           <div key={item.id}>
-             {/* <h2 style={{textAlign:'center'}}>Cart</h2> */}
             <div className={styles.cartFlex}>
           
               <div className={styles.cartImage}>
@@ -80,7 +80,19 @@ const Cart = () => {
       </div>
       <button className={styles.shopMore}><Link to='/'>Shop more</Link></button>
         <div className={styles.proceedCheckOut}>
-      <button className={styles.checkOut}><Link to="/checkout">proceed to checkout</Link></button>
+
+        <Link
+  to={{
+    pathname: '/checkout',
+    state: { totalDiscountedPriceInNaira } // Pass the totalDiscountedPriceInNaira in the state
+  }}
+>
+  <button className={styles.checkOut}>Proceed to Checkout</button>
+</Link>
+
+
+          
+      {/* <button className={styles.checkOut}><Link to="/checkout">proceed to checkout</Link></button> */}
       </div>
     </div>
   );
