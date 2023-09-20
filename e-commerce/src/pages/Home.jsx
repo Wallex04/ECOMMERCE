@@ -13,6 +13,7 @@ const Home = () => {
   const [list, setList] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
+  // fetching the Api
   const getItems = async () => {
     try {
       const res = await fetch("https://dummyjson.com/products")

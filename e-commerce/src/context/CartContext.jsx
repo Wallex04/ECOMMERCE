@@ -27,15 +27,15 @@ useEffect(() => {
 
 
 
-  // chat end here
+
   const[cart, setCart]=useState()
     const [cartItems, setCartItems] = useState([])
     const [quantity, setQuantity] = useState(1)
     const [totalQuantities, setTotalQuantities] = useState(0)
     const [totalPrice, setTotalPrice] = useState(0)
-   
-    let foundProduct;
 
+   // adding to the cart
+    let foundProduct;
     const onAdd = (product, quantity) => {
       const exist = cartItems.find(item => item.id === product.id);
     
@@ -57,10 +57,11 @@ useEffect(() => {
   saveCartToLocalStorage();
     };
     
-
+// increasing the quantities
   const onIncrement = () => {
     setQuantity((preQty) => preQty + 1)
   }
+  // decreasing the quantities
   const onDecrement = () => {
     if (quantity === 1) {
       return;
@@ -68,7 +69,7 @@ useEffect(() => {
     setQuantity((prevQty) => prevQty - 1);
   };
   
-
+// removing from the cart
   const onRemove = (product) => {
   foundProduct = cartItems.find((item) => item.id === product.id);
   const newCartItems = cartItems.filter((item) => item.id !== product.id);

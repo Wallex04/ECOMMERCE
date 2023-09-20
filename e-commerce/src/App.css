@@ -121,7 +121,7 @@ h1 {
 .cartContainer {
   width: 100%;
   justify-content: center;
-  align-items:end;
+  align-items: end;
   display: flex;
   gap: 1rem;
 }
@@ -222,14 +222,12 @@ a {
 }
 /* footer style end */
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
 }
-
 
 /* loader style */
 .pl {
@@ -322,7 +320,7 @@ a {
 
 @keyframes ringStroke42 {
   from,
-    to {
+  to {
     stroke-dashoffset: 452;
     transform: rotate(-45deg);
   }
@@ -335,42 +333,40 @@ a {
 
 @keyframes tick42 {
   from,
-    3%,
-    47%,
-    to {
+  3%,
+  47%,
+  to {
     stroke-dashoffset: -12;
   }
 
   14%,
-    36% {
+  36% {
     stroke-dashoffset: 0;
   }
 }
 /* loader style end */
-
-
-
 
 @media only screen and (max-width: 320px) {
   .productCard {
     width: 300px;
   }
   .header h1 {
-   font-size: 1.8rem; 
+    font-size: 1.8rem;
   }
   p {
     font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 500px) {
-  .testing{
+  .testing {
     padding: 0;
     margin: 0;
   }
-  .topContainer, .img-container {
+  .topContainer,
+  .img-container {
     margin-bottom: 2rem;
   }
- 
+
   .productCover {
     width: 400px;
     margin: 0;
@@ -413,7 +409,8 @@ a {
   .img-container {
     margin-top: 0;
   }
-  .image1, .image2 {
+  .image1,
+  .image2 {
     width: 450px;
   }
   .aboutText h1 {
@@ -442,24 +439,24 @@ a {
     align-items: center;
   }
   .footerFlex a {
-    color: white!important;
+    color: white !important;
     font-size: 1.2rem;
   }
 }
 
-  @media screen and (min-device-width: 550px) and (max-device-width: 950px) { 
-    .footerFlex {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      justify-content: center;
-      align-items: center;
-    }
-    .footerFlex a {
-      color: white;
-      font-size: 1.5rem;
-    }
+@media screen and (min-device-width: 550px) and (max-device-width: 950px) {
+  .footerFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
   }
+  .footerFlex a {
+    color: white;
+    font-size: 1.5rem;
+  }
+}
 
 .brand_cat {
   display: flex;
